@@ -12,10 +12,10 @@ module.exports = {
       xl: '1440px',
     },
     colors: {
-      "primary": "#ff1e00",
-      "secondary": "#e8f9fd",
+      "primary": "#252734",
+      "secondary": "#2A2C39",
       "accent": "#59ce8f",
-      "neutral": "#011B39",
+      "neutral": "#65666D",
       "base-100": "#FFFFFF",
       "info": "#3BADC9",
       "success": "#1FC77E",

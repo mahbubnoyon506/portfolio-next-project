@@ -56,7 +56,7 @@ export default function Layout({ children, home }) {
         )}
       </header> */}
       <main>{children}</main>
-      {/* <MouseParticles g={1} color="random" cull="col,image-wrapper"/> */}
+      <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );
 }

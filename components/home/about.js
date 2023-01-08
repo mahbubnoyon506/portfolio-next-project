@@ -21,11 +21,11 @@ import Image from 'next/image';
 const About = () => {
 
     return (
-        <div>
+        <div className='bg-secondary p-5 md:p-10 lg:p-20'>
             <div className='grid lg:gap-10 lg:grid-cols-12 items-center py-5 lg:py-10'>
-                <div className=' text-neutral col-span-5 py-5'>
+                <div className=' text-base-100 col-span-5 py-5'>
                     <h2 className='text-4xl font-semibold pb-5'>About Me</h2>
-                    <p className='text-lg'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit nobis repudiandae quidem ad, inventore vitae temporibus fuga modi ducimus perspiciatis.</p> <br />
+                    <p className='text-xl '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit nobis repudiandae quidem ad, inventore vitae temporibus fuga modi ducimus perspiciatis.</p> <br />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus omnis neque commodi nostrum, doloribus explicabo amet tenetur eos eum odit obcaecati excepturi debitis, repudiandae consequatur numquam nulla tempora? Quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vero at? Autem accusamus pariatur aliquid unde maiores. Ut totam est molestias tenetur, inventore esse suscipit facere sit, itaque, recusandae voluptatem.</p>
                 </div>
                 <div className='text-neutral col-span-7'>
@@ -33,7 +33,7 @@ const About = () => {
                         {
                             skills.map((skill, index) =>
                                 <>
-                                    <Card key={index} sx={{ minWidth: '',  }}>
+                                    <Card key={index} sx={{ background: '#252734',  }}>
                                         <div className='p-4'>
                                             {/* <Image
                                                 className=''
@@ -46,7 +46,7 @@ const About = () => {
                                             <img className='w-16 mx-auto' src={skill.image} alt="" />
                                             <div className='flex justify-center mt-2'>
                                                 <CountUp
-                                                    className='font-bold text-2xl text-primary'
+                                                    className='font-bold text-2xl text-base-100'
                                                     start={0}
                                                     end={skill.count}
                                                     duration={3}
@@ -75,12 +75,12 @@ export default About;
 const skills = [
     {
         name: 'HTML',
-        image: '/images/icons/html5.svg',
+        image: '/images/icons/html.svg',
         count: '95'
     },
     {
         name: 'CSS',
-        image: `/images/icons/css.svg`,
+        image: `/images/icons/css-alt.svg`,
         count: '90'
     },
     {
