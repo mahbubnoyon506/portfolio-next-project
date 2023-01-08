@@ -3,11 +3,12 @@ import Head from 'next/head'
 import Image from 'next/image';
 import About from '../components/home/about';
 import Banner from '../components/home/banner';
-import Layout from '../components/layout';
+import dynamic from 'next/dynamic';
 import bgImage from '../public/images/portflio-bg.jpg'
 
 
 export default function Home() {
+  const Layout = dynamic(import('../components/layout'), { ssr: false });
 
   return (
     <>
@@ -18,9 +19,10 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Banner/>
-        <div style={{ backgroundImage: `url(${bgImage.src})`, backgroundPosition: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',  }}>
-          <About/>
+        <Banner />
+        <div className='px-5 md:px-10 lg:px-20' style={{ backgroundImage: `url(${bgImage.src})`, backgroundPosition: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', }}>
+          <About />
+          
         </div>
       </Layout>
     </>

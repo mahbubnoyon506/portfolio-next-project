@@ -1,12 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import MouseParticles from 'react-mouse-particles'
 
-const name = 'Mahbub Noyon';
-export const siteTitle = 'Next.js Sample Website';
+const siteTitle = 'Portfolio Site'
 
 export default function Layout({ children, home }) {
   return (
@@ -60,7 +56,7 @@ export default function Layout({ children, home }) {
         )}
       </header> */}
       <main>{children}</main>
-      <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
+      {/* <MouseParticles g={1} color="random" cull="col,image-wrapper"/> */}
     </div>
   );
 }
