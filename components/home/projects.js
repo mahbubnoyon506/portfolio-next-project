@@ -15,7 +15,7 @@ const Projects = () => {
     return (
         <div className='bg-primary p-5 md:p-10 lg:p-20'>
             <div className='flex justify-between pb-5'>
-                <h2 className='text-4xl font-semibold pb-5'>Recent Projects</h2>
+                <h2 className='text-5xl font-semibold pb-5'>Recent Projects</h2>
                 <div className='flex justify-between'>
                     <div className='border-2 w-10 h-10 rounded-full flex justify-center items-center hover:bg-neutral hover:transition-all hover:ease-in-out hover:duration-500 hover:border-neutral mr-2'>
                         <FaAngleDoubleLeft />
@@ -34,7 +34,7 @@ const Projects = () => {
                 //     clickable: true,
                 // }}
                 modules={[FreeMode, Pagination, Navigation]}
-                navigation={true}
+                // navigation={true}
                 className="mySwiper">
                 {
                     projects.map((project) =>

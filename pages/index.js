@@ -6,6 +6,8 @@ import Banner from '../components/home/banner';
 import dynamic from 'next/dynamic';
 import bgImage from '../public/images/portflio-bg.jpg'
 import Projects from '../components/home/projects';
+import Contact from '../components/home/contact';
+import Blogs from '../components/home/blogs';
 
 
 export default function Home() {
@@ -24,6 +26,8 @@ export default function Home() {
         <div className=''>
           <About />
           <Projects/>
+          <Blogs/>
+          <Contact/>
         </div>
       </Layout>
     </>
