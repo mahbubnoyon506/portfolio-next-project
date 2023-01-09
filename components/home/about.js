@@ -33,20 +33,12 @@ const About = () => {
                         {
                             skills.map((skill, index) =>
                                 <>
-                                    <Card key={index} sx={{ background: '#252734',  }}>
-                                        <div className='p-4'>
-                                            {/* <Image
-                                                className=''
-                                                priority
-                                                src={skill.image}
-                                                height={140}
-                                                width={140}
-                                                alt=""
-                                            /> */}
+                                    <Card className='' key={index} sx={{ background: '#252734', '&hover': {background: '#2A2C39'}}}>
+                                        <div className='p-4  bg-primary group hover:bg-secondary'>
                                             <img className='w-16 mx-auto' src={skill.image} alt="" />
                                             <div className='flex justify-center mt-2'>
                                                 <CountUp
-                                                    className='font-bold text-2xl text-base-100'
+                                                    className='group-hover:text-base-100 font-bold text-2xl text-neutral'
                                                     start={0}
                                                     end={skill.count}
                                                     duration={3}
@@ -57,7 +49,7 @@ const About = () => {
                                                 >
                                                 </CountUp>
                                             </div>
-                                            <p className='text-center font-semibold text-neutral'>{skill.name}</p>
+                                            <p className='text-center font-semibold text-neutral group-hover:text-base-100'>{skill.name}</p>
                                         </div>
                                     </Card>
                                 </>

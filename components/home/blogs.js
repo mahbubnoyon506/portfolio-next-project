@@ -18,7 +18,16 @@ const Blogs = () => {
                                         <div className='text-base-100 col-span-2'>
                                             <h2 className='text-2xl font-semibold pb-3'>{blog.title}</h2>
                                             <p className='text-neutral pb-3'>{blog.description}</p>
-                                            <Button variant='contained'>Read More</Button>
+                                            <Button sx={{
+                                                borderRadius: '0px',
+                                                // padding: '8px 40px',
+                                                border: '1px solid #65666D',
+                                                color: '#65666D',
+                                                fontWeight: '500',
+                                                '&:hover': {
+                                                    color: '#fff', border: '1px solid #fff', background: 'transparent'
+                                                },
+                                            }} variant='outlined'>Read More</Button>
                                         </div>
                                     </div>
                                 </Card>

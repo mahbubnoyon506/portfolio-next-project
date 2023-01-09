@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card } from '@mui/material';
+import { Button, Card } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from 'react-icons/fa';
@@ -17,10 +17,10 @@ const Projects = () => {
             <div className='flex justify-between pb-5'>
                 <h2 className='text-5xl font-semibold pb-5'>Recent Projects</h2>
                 <div className='flex justify-between'>
-                    <div className='border-2 w-10 h-10 rounded-full flex justify-center items-center hover:bg-neutral hover:transition-all hover:ease-in-out hover:duration-500 hover:border-neutral mr-2'>
+                    <div className='border-2 w-10 h-10 rounded-full cursor-pointer flex justify-center items-center hover:bg-neutral hover:transition-all ease-in-out hover:duration-300 hover:border-neutral mr-2'>
                         <FaAngleDoubleLeft />
                     </div>
-                    <div className='border-2 w-10 h-10 rounded-full flex justify-center items-center hover:bg-neutral hover:transition-all hover:ease-in-out hover:duration-500 hover:border-neutral'>
+                    <div className='border-2 w-10 h-10 rounded-full cursor-pointer flex justify-center items-center hover:bg-neutral hover:transition-all ease-in-out hover:duration-300 hover:border-neutral'>
                         <FaAngleDoubleRight />
                     </div>
                 </div>
