@@ -7,7 +7,7 @@ const Blogs = () => {
             <h2 className='text-5xl font-semibold pb-5'>Recent Blogs</h2>
             <div className=''>
                 {
-                    blogs.slice(0, 2).map((blog) =>
+                    blogs.slice(2, 4).map((blog) =>
                         <>
                             <div className='mb-10'>
                                 <Card sx={{ background: '#252734', padding: '50px' }}>

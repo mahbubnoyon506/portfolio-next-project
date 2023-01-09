@@ -8,6 +8,7 @@ import bgImage from '../public/images/portflio-bg.jpg'
 import Projects from '../components/home/projects';
 import Contact from '../components/home/contact';
 import Blogs from '../components/home/blogs';
+import BannerProfile from '../components/home/bannerProfile';
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Banner />
+        <BannerProfile/>
         <div className=''>
           <About />
           <Projects/>

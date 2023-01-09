@@ -13,7 +13,7 @@ import { FreeMode, Pagination, Navigation } from "swiper";
 
 const Projects = () => {
     return (
-        <div className='bg-primary p-5 md:p-10 lg:p-20'>
+        <div className='bg-primary p-5 md:p-10 lg:p-20 z-50'>
             <div className='flex justify-between pb-5'>
                 <h2 className='text-5xl font-semibold pb-5'>Recent Projects</h2>
                 <div className='flex justify-between'>
