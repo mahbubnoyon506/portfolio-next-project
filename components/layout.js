@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
 import MouseParticles from 'react-mouse-particles'
+import Footer from './footer/footer';
 
 const siteTitle = 'Portfolio Site'
 
@@ -22,40 +23,8 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      {/* <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/me.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/me.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
-      </header> */}
       <main>{children}</main>
+      <Footer></Footer>
       <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );

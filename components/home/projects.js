@@ -80,7 +80,7 @@ const projects = [
     {
         "id": 2,
         "name": "Manufacturer Company",
-        "title": "John Doeere",
+        "title": "John Deere",
         "homeImage": "https://i.ibb.co/rwZdwk2/manufecture-home.png",
         "description": {
             "overview": " This site is manufacturer based. Users can create an account, order products, and pay online.",
