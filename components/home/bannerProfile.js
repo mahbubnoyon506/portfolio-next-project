@@ -35,9 +35,9 @@ const BannerProfile = () => {
         }
     }, [])
     return (
-        <div className='bg-primary grid gap-10 lg:grid-cols-2 items-end -z-10'>
+        <div className='bg-primary grid lg:grid-cols-2 items-end -z-10'>
             <div>
-                <div className='relative rotate-[130deg] mr-[500px] mt-[-270px]'>
+                <div className=' hidden lg:block rotate-[130deg] mr-[500px] mt-[-270px]'>
                     <div className=''>
                         <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-96 h-96 rounded-t-full rounded-r-full'>
                             <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-80 h-80 rounded-full z-50'>
@@ -46,12 +46,12 @@ const BannerProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className=' pl-5 md:pl-16 lg:pl-40 pb-10'>
+                <div className='pt-10 pl-5 md:pl-16 lg:pl-36 pb-10'>
                     <div className='flex justify-left items-center'>
                         <p className='text-2xl'>Hello<BsExclamationLg className='inline' size={20} /> I&apos;m</p>
                     </div>
-                    <h2 className='text-6xl font-bold pt-4 pb-7'>Mahbub Noyon</h2>
-                    <h2 className="text-lg md:text-xl lg:text-2xl mb-16 text-neutral">Full-Stack Developer with  <span className='text-base-100' ref={el} /> </h2>
+                    <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold pt-4 pb-7'>Mahbub Noyon</h2>
+                    <h2 className=" md:text-xl mb-16 text-neutral">Full-Stack Developer with  <span className='text-base-100' ref={el} /> </h2>
                     <Button sx={{
                         borderRadius: '45px',
                         padding: '20px 40px',
@@ -64,7 +64,7 @@ const BannerProfile = () => {
                         },
                     }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
                 </div>
-                <div className='pt-24'>
+                <div className='hidden lg:block pt-24'>
                     <div className='rotate-45 ml-[-270px] mb-[-350px]'>
                         <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-96 h-96 rounded-t-full rounded-r-full'>
                             <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-80 h-80 rounded-full z-50'>
@@ -74,10 +74,10 @@ const BannerProfile = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='flex justify-center lg:justify-start lg:ml-[-70px]'>
                 <div className='relative'>
-                    <Image className='z-50' src='/images/profileImage.png' width='500' height='700' alt='' />
-                    <div className='rotate-[70deg] absolute mt-[-430px] ml-[150px]'>
+                    <Image className='' src='/images/profileImage.png' width='500' height='700' alt='' />
+                    <div className='hidden md:block rotate-[75deg] absolute mt-[-490px] ml-[130px]'>
                         <div className='flex items-center justify-center w-[28rem] h-[28rem] border border-b-0 border-l-0 border-r-0 border-neutral rounded-full'>
                             <div className='flex items-center justify-center w-[22rem] h-[22rem] border border-b-0 border-l-0 border-r-0 border-base-100 rounded-full'>
                                 <div className='w-64 h-64 border border-b-0 border-l-0 border-r-0 border-neutral rounded-full'>
@@ -100,3 +100,5 @@ const BannerProfile = () => {
 };
 
 export default BannerProfile;
+
+// relative border border-neutral rounded-r-full border-y-0 border-l-0

@@ -4,19 +4,19 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div className='bg-secondary p-5 md:p-10 lg:p-20'>
-            <h2 className='text-5xl font-semibold pb-5'>Recent Blogs</h2>
+            <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>Recent Blogs</h2>
             <div className=''>
                 {
                     blogs.slice(2, 4).map((blog) =>
                         <>
                             <div className='mb-10'>
                                 <Card sx={{ background: '#252734', padding: '50px' }}>
-                                    <div className='grid grid-cols-3 items-center'>
-                                        <div className='mr-10 col-span-1'>
+                                    <div className='md:grid grid-cols-3 items-center'>
+                                        <div className='mr-10 col-span-1 mb-3 md:mb-0'>
                                             <img src={blog.image} alt="" />
                                         </div>
                                         <div className='text-base-100 col-span-2'>
-                                            <h2 className='text-2xl font-semibold pb-3'>{blog.title}</h2>
+                                            <h2 className='text-xl md:text-2xl lg:text-3xl font-semibold pb-3'>{blog.title}</h2>
                                             <p className='text-neutral pb-3'>{blog.description}</p>
                                             <Button sx={{
                                                 borderRadius: '0px',

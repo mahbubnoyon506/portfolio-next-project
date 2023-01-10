@@ -24,9 +24,9 @@ const About = () => {
         <div className='bg-secondary p-5 md:p-10 lg:p-20 z-50'>
             <div className='grid lg:gap-10 lg:grid-cols-12 items-center py-5 lg:py-10'>
                 <div className=' text-base-100 col-span-5 py-5'>
-                    <h2 className='text-5xl font-semibold pb-5'>About Me</h2>
-                    <p className='text-xl '>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit nobis repudiandae quidem ad, inventore vitae temporibus fuga modi ducimus perspiciatis.</p> <br />
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus omnis neque commodi nostrum, doloribus explicabo amet tenetur eos eum odit obcaecati excepturi debitis, repudiandae consequatur numquam nulla tempora? Quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vero at? Autem accusamus pariatur aliquid unde maiores. Ut totam est molestias tenetur, inventore esse suscipit facere sit, itaque, recusandae voluptatem.</p>
+                    <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>About Me</h2>
+                    <p className='text-xl text-neutral'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit nobis repudiandae quidem ad, inventore vitae temporibus fuga modi ducimus perspiciatis.</p> <br />
+                    <p className='text-neutral'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus omnis neque commodi nostrum, doloribus explicabo amet tenetur eos eum odit obcaecati excepturi debitis, repudiandae consequatur numquam nulla tempora? Quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vero at? Autem accusamus pariatur aliquid unde maiores. Ut totam est molestias tenetur, inventore esse suscipit facere sit, itaque, recusandae voluptatem.</p>
                 </div>
                 <div className='text-neutral col-span-7'>
                     <div className='grid gap-5 grid-cols-2 md:grid-cols-4 '>

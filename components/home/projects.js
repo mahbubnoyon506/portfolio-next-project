@@ -15,7 +15,7 @@ const Projects = () => {
     return (
         <div className='bg-primary p-5 md:p-10 lg:p-20 z-50'>
             <div className='flex justify-between pb-5'>
-                <h2 className='text-5xl font-semibold pb-5'>Recent Projects</h2>
+                <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>Recent Projects</h2>
                 <div className='flex justify-between'>
                     <div className='border-2 w-10 h-10 rounded-full cursor-pointer flex justify-center items-center hover:bg-neutral hover:transition-all ease-in-out hover:duration-300 hover:border-neutral mr-2'>
                         <FaAngleDoubleLeft />
@@ -26,10 +26,17 @@ const Projects = () => {
                 </div>
             </div>
             <Swiper
-                slidesPerView={2}
-                spaceBetween={30}
                 loop={true}
                 freeMode={true}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1,
+                    },
+                    1024: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                }}
                 // pagination={{
                 //     clickable: true,
                 // }}
@@ -42,7 +49,7 @@ const Projects = () => {
                             <SwiperSlide>
                                 <Card sx={{ background: '#282A37', padding: '50px 50px 0px' }}>
                                     <Link href='/'>
-                                        <h2 className='text-3xl font-bold text-base-100'>{project.title}</h2 >
+                                        <h2 className='text-xl md:text-2xl lg:text-3xl font-bold text-base-100'>{project.title}</h2 >
                                         <p className='text-neutral pt-2 pb-5'>{project.name}</p>
                                         <img src={project.images[0]} alt='' style={{ minHeight: '250px' }} />
                                     </Link>
