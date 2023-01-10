@@ -4,6 +4,9 @@ import { useEffect, useRef } from "react";
 import { BsExclamationLg } from 'react-icons/bs';
 import { Button } from '@mui/material';
 import { AiOutlineDownload } from 'react-icons/ai';
+import Image from 'next/image';
+import { FaInstagram, FaLinkedin, FaRegCopyright, FaTwitter } from 'react-icons/fa';
+import { BsFacebook } from 'react-icons/bs';
 
 const BannerProfile = () => {
     const el = useRef(null);
@@ -32,9 +35,18 @@ const BannerProfile = () => {
         }
     }, [])
     return (
-        <div className='bg-primary'>
+        <div className='bg-primary grid gap-10 lg:grid-cols-2 items-end -z-10'>
             <div>
-                <div className='pt-32 pl-5 md:pl-16 lg:pl-40'>
+                <div className='relative rotate-[130deg] mr-[500px] mt-[-270px]'>
+                    <div className=''>
+                        <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-96 h-96 rounded-t-full rounded-r-full'>
+                            <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-80 h-80 rounded-full z-50'>
+                                <div className='border border-b-0 border-l-0 border-r-0 border-neutral w-64 h-64 rounded-full z-50'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className=' pl-5 md:pl-16 lg:pl-40 pb-10'>
                     <div className='flex justify-left items-center'>
                         <p className='text-2xl'>Hello<BsExclamationLg className='inline' size={20} /> I&apos;m</p>
                     </div>
@@ -50,13 +62,34 @@ const BannerProfile = () => {
                         '&:hover': {
                             color: '#fff', border: '1px solid #fff', background: 'transparent'
                         },
-                    }} variant='outlined'>Download CV <AiOutlineDownload size={30}/> </Button>
+                    }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
                 </div>
-                <div className='mt-[-50px]'>
-                    <div className='ml-[-150px]'>
-                        <div className='flex justify-center items-center border border-neutral w-96 h-96 rounded-t-full rounded-r-full'>
-                            <div className='flex justify-center items-center border border-neutral w-80 h-80 rounded-full z-50'>
-                                <div className='border border-neutral w-64 h-64 rounded-full z-50'></div>
+                <div className='pt-24'>
+                    <div className='rotate-45 ml-[-270px] mb-[-350px]'>
+                        <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-96 h-96 rounded-t-full rounded-r-full'>
+                            <div className='flex justify-center items-center border border-b-0 border-l-0 border-r-0 border-neutral w-80 h-80 rounded-full z-50'>
+                                <div className='border border-b-0 border-l-0 border-r-0 border-neutral w-64 h-64 rounded-full z-50'></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div className='relative'>
+                    <Image className='z-50' src='/images/profileImage.png' width='500' height='700' alt='' />
+                    <div className='rotate-[70deg] absolute mt-[-430px] ml-[150px]'>
+                        <div className='flex items-center justify-center w-[28rem] h-[28rem] border border-b-0 border-l-0 border-r-0 border-neutral rounded-full'>
+                            <div className='flex items-center justify-center w-[22rem] h-[22rem] border border-b-0 border-l-0 border-r-0 border-base-100 rounded-full'>
+                                <div className='w-64 h-64 border border-b-0 border-l-0 border-r-0 border-neutral rounded-full'>
+                                    <div className='rotate-[-70deg]'>
+                                        <ul className='flex justify-between items-start relative'>
+                                            <li className='absolute flex justify-center items-center w-12 h-12 mt-[-140px] ml-[40px]  bg-primary border rounded-full'><a href="#"><BsFacebook className='text-neutral hover:text-base-100' size={30} /></a></li>
+                                            <li className='absolute flex justify-center items-center w-12 h-12 ml-[150px] mt-[-30px] bg-primary border rounded-full'><a href="#"><FaLinkedin className='text-neutral hover:text-base-100' size={30} /></a></li>
+                                            <li className='absolute flex justify-center items-center w-12 h-12 mt-[130px] ml-[120px] bg-primary border rounded-full'><a href="#"><FaTwitter className='text-neutral hover:text-base-100' size={30} /></a></li>
+                                        </ul>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

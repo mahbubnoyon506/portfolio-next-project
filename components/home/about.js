@@ -21,7 +21,7 @@ import Image from 'next/image';
 const About = () => {
 
     return (
-        <div className='bg-secondary p-5 md:p-10 lg:p-20'>
+        <div className='bg-secondary p-5 md:p-10 lg:p-20 z-50'>
             <div className='grid lg:gap-10 lg:grid-cols-12 items-center py-5 lg:py-10'>
                 <div className=' text-base-100 col-span-5 py-5'>
                     <h2 className='text-5xl font-semibold pb-5'>About Me</h2>
