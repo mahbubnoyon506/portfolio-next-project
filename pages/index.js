@@ -9,6 +9,7 @@ import Projects from '../components/home/projects';
 import Contact from '../components/home/contact';
 import Blogs from '../components/home/blogs';
 import BannerProfile from '../components/home/bannerProfile';
+import BackToTop from '../components/backToTop/backToTop';
 
 
 export default function Home() {
@@ -24,13 +25,14 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {/* <Banner /> */}
-        <BannerProfile/>
+        <BannerProfile />
         <div className=''>
-          <About />
-          <Projects/>
-          <Blogs/>
-          <Contact/>
+            <About />
+          <Projects />
+          <Blogs />
+          <Contact />
         </div>
+        <BackToTop />
       </Layout>
     </>
   )

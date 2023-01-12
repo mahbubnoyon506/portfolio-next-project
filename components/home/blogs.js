@@ -3,16 +3,16 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='bg-secondary p-5 md:p-10 lg:p-20'>
+        <div id='blogs' className='bg-secondary p-5 md:p-10 lg:p-20'>
             <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>Recent Blogs</h2>
             <div className=''>
                 {
                     blogs.slice(2, 4).map((blog) =>
                         <>
                             <div className='mb-10'>
-                                <Card sx={{ background: '#252734', padding: '50px' }}>
-                                    <div className='md:grid grid-cols-3 items-center'>
-                                        <div className='mr-10 col-span-1 mb-3 md:mb-0'>
+                                <Card sx={{ background: '#252734' }}>
+                                    <div className='md:grid grid-cols-3 items-center px-5 md:px-10 lg:px-16 py-5 md:py-8 lg:py-12'>
+                                        <div className='md:mr-10 col-span-1 mb-3 md:mb-0'>
                                             <img src={blog.image} alt="" />
                                         </div>
                                         <div className='text-base-100 col-span-2'>

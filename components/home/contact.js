@@ -5,7 +5,7 @@ import { MdMyLocation } from 'react-icons/md';
 
 const Contact = () => {
     return (
-        <div className='bg-primary grid gap-5 lg:grid-cols-2 p-5 md:p-10 lg:p-20'>
+        <div id='contact' className='bg-primary grid gap-5 lg:grid-cols-2 p-5 md:p-10 lg:p-20'>
             <div>
                 <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>Contact</h2>
                 <p className='pb-5'>Do you have any query or discussion? Contact Us.</p>
@@ -31,8 +31,8 @@ const Contact = () => {
                 </ul>
             </div>
             <div className=''>
-                <Card sx={{ background: '#282A37', padding: '30px 50px' }}>
-                    <form className='text-neutral'>
+                <Card sx={{ background: '#282A37',  }}>
+                    <form className='text-neutral px-5 md:px-10 lg:px-16 py-5 md:py-8 lg:py-12'>
                         <div className='mb-2'>
                             <label className='block' htmlFor="Your name">Your name</label>
                             <input className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="name" id="name" />
