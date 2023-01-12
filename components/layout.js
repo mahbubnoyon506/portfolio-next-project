@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import MouseParticles from 'react-mouse-particles'
 import Footer from './footer/footer';
+import Header from './header/header';
 
 const siteTitle = 'Portfolio Site'
 
@@ -23,8 +24,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Header/>
       <main>{children}</main>
-      <Footer></Footer>
+      <Footer/>
       <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );

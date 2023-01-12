@@ -33,8 +33,9 @@ const About = () => {
                         {
                             skills.map((skill, index) =>
                                 <>
-                                    <Card className='' key={index} sx={{ background: '#252734', '&hover': {background: '#2A2C39'}}}>
+                                    <Card className='' key={index} sx={{ background: '#252734', '&hover': { background: '#2A2C39' } }}>
                                         <div className='p-4  bg-primary group hover:bg-secondary'>
+                                            {/* <Image src={skill.image} width='100' height='100' alt=''/> */}
                                             <img className='w-16 mx-auto' src={skill.image} alt="" />
                                             <div className='flex justify-center mt-2'>
                                                 <CountUp
