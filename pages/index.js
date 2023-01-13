@@ -32,7 +32,7 @@ export default function Home() {
           <Blogs />
           <Contact />
         </div>
-        <BackToTop />
+        {/* <BackToTop /> */}
       </Layout>
     </>
   )

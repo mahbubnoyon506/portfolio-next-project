@@ -3,6 +3,7 @@ import styles from './layout.module.css';
 import MouseParticles from 'react-mouse-particles'
 import Footer from './footer/footer';
 import Header from './header/header';
+import BackToTop from './backToTop/backToTop';
 
 const siteTitle = 'Portfolio Site'
 
@@ -27,6 +28,7 @@ export default function Layout({ children, home }) {
       <Header/>
       <main>{children}</main>
       <Footer/>
+      <BackToTop/>
       <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );
