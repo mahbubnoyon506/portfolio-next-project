@@ -25,8 +25,8 @@ const About = () => {
             <div className='grid lg:gap-10 lg:grid-cols-12 items-center py-5 lg:py-10'>
                 <div className=' text-base-100 col-span-5 py-5'>
                     <h2 className='text-3xl md:text-4xl lg:text-5xl font-semibold pb-5'>About Me</h2>
-                    <p className='text-xl text-neutral'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit fugit nobis repudiandae quidem ad, inventore vitae temporibus fuga modi ducimus perspiciatis.</p> <br />
-                    <p className='text-neutral'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum natus omnis neque commodi nostrum, doloribus explicabo amet tenetur eos eum odit obcaecati excepturi debitis, repudiandae consequatur numquam nulla tempora? Quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, vero at? Autem accusamus pariatur aliquid unde maiores. Ut totam est molestias tenetur, inventore esse suscipit facere sit, itaque, recusandae voluptatem.</p>
+                    <p className='text-xl text-neutral'>I am a professional Software Developer in Front-end and Back-end Development with React JS, Next JS and WordPress. </p> <br />
+                    <p className='text-neutral'>I am capable to make a mobile-friendly and faster responsive website. You can also get unique ideas about UX/UI Design from me. I have completed 30+ projects for various local clients. Also, I have expertise in creating an eCommerce website. I love my profession and building websites with my best efforts. I am also passionate to make Web Applications using React JS and Node JS.</p>
                 </div>
                 <div className='text-neutral col-span-7'>
                     <div className='grid gap-5 grid-cols-2 md:grid-cols-4 '>
