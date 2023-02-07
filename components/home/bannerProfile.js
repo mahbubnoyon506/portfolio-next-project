@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { FaInstagram, FaLinkedin, FaRegCopyright, FaTwitter } from 'react-icons/fa';
 import { BsFacebook } from 'react-icons/bs';
 import bannerImage from '../../public/images/profileImage.png'
+import Link from 'next/link';
 
 const BannerProfile = () => {
     const el = useRef(null);
@@ -53,9 +54,9 @@ const BannerProfile = () => {
                             <div className='w-64 h-64 border border-b-0 border-l-0 border-r-0 border-neutral rounded-full'>
                                 <div className='rotate-[-70deg]'>
                                     <ul className='flex justify-between items-start relative'>
-                                        <li className='absolute flex justify-center items-center w-12 h-12 mt-[-140px] ml-[40px]  bg-primary border rounded-full'><a href="#"><BsFacebook className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
-                                        <li className='absolute flex justify-center items-center w-12 h-12 ml-[150px] mt-[-30px] bg-primary border rounded-full'><a href="#"><FaLinkedin className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
-                                        <li className='absolute flex justify-center items-center w-12 h-12 mt-[130px] ml-[120px] bg-primary border rounded-full'><a href="#"><FaTwitter className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
+                                        <li className='absolute flex justify-center items-center w-12 h-12 mt-[-140px] ml-[40px]  bg-primary border rounded-full'><a href="https://www.facebook.com/mahbub4noyon/" target="_blank" rel='noreferrer'><BsFacebook className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
+                                        <li className='absolute flex justify-center items-center w-12 h-12 ml-[150px] mt-[-30px] bg-primary border rounded-full'><a href="https://www.linkedin.com/in/mahbubnoyon/" target="_blank" rel='noreferrer'><FaLinkedin className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
+                                        <li className='absolute flex justify-center items-center w-12 h-12 mt-[130px] ml-[120px] bg-primary border rounded-full'><a href="https://twitter.com/MahbubNoyon1" target="_blank" rel='noreferrer'><FaTwitter className='text-neutral hover:text-base-100 transition ease-in-out duration-300 -rotate-[140deg]' size={30} /></a></li>
                                     </ul>
                                 </div>
                                 <div className='rotate-[150deg] flex justify-center items-center mt-[70px]'>
@@ -87,17 +88,19 @@ const BannerProfile = () => {
                         </div>
                         <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold pt-4 pb-7'>Mahbub Noyon</h2>
                         <h2 className=" md:text-lg lg:text-xl mb-16 text-neutral">Full-Stack Developer with  <span className='text-base-100' ref={el} /> </h2>
-                        <Button sx={{
-                            borderRadius: '45px',
-                            padding: '20px 40px',
-                            border: '1px solid #65666D',
-                            color: '#65666D',
-                            fontSize: '24px',
-                            fontWeight: '700',
-                            '&:hover': {
-                                color: '#fff', border: '1px solid #fff', background: 'transparent'
-                            },
-                        }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
+                        <Link href='https://drive.google.com/file/d/1rsOy9tdzvIq24gZh5ntMZbAuMe5pHtch/view?usp=sharing' target='_blank' download>
+                            <Button sx={{
+                                borderRadius: '45px',
+                                padding: '20px 40px',
+                                border: '1px solid #65666D',
+                                color: '#65666D',
+                                fontSize: '24px',
+                                fontWeight: '700',
+                                '&:hover': {
+                                    color: '#fff', border: '1px solid #fff', background: 'transparent'
+                                },
+                            }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
+                        </Link>
                     </div>
                     {/* <div className='hidden lg:block pt-24 absolute'>
                     <div className=' ml-[] mb-[]'>

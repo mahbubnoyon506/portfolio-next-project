@@ -12,10 +12,10 @@ const Footer = () => {
                 </div>
                 <div className='flex justify-center items-center pt-2'>
                     <ul className='flex justify-center items-center'>
-                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href=""><BsFacebook size={25}/></a></li>
-                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href=""><FaInstagram size={25}/></a></li>
-                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href=""><FaLinkedin size={25}/></a></li>
-                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href=""><FaTwitter size={25}/></a></li>
+                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href="https://www.facebook.com/mahbub4noyon/" target="_blank" rel='noreferrer'><BsFacebook size={25}/></a></li>
+                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href="https://www.facebook.com/mahbub4noyon/" target="_blank" rel='noreferrer'><FaInstagram size={25}/></a></li>
+                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href="https://www.linkedin.com/in/mahbubnoyon/" target="_blank" rel='noreferrer'><FaLinkedin size={25}/></a></li>
+                        <li className='mr-2'><a className='text-neutral hover:text-base-100 transition-all ease-in-out duration-300' href="https://twitter.com/MahbubNoyon1" target="_blank" rel='noreferrer'><FaTwitter size={25}/></a></li>
                     </ul>
                 </div>
             </div>
