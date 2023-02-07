@@ -1,4 +1,4 @@
-const MONGO_URI = "mongodb+srv://portfolio-user:6*SdY-8Z7$ZNu62@cluster0.wiiz8tg.mongodb.net/?retryWrites=true&w=majority"
+const MONGO_URI = `mongodb+srv://portfolio-user:6*SdY-8Z7$ZNu62@cluster0.wiiz8tg.mongodb.net/?retryWrites=true&w=majority`
 
 import mongoose from "mongoose";
 

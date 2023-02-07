@@ -27,7 +27,7 @@ export default function Home() {
         {/* <Banner /> */}
         <BannerProfile />
         <div className=''>
-            <About />
+          <About />
           <Projects />
           <Blogs />
           <Contact />
