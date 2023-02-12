@@ -9,6 +9,21 @@ import { FaInstagram, FaLinkedin, FaRegCopyright, FaTwitter } from 'react-icons/
 import { BsFacebook } from 'react-icons/bs';
 import bannerImage from '../../public/images/profileImage.png'
 import Link from 'next/link';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import { red, green, blue } from '@mui/material/colors';
+
+const styles = (theme) => ({
+    root: {
+    //   backgroundColor: 'blue',
+      // Match [sm, md)
+      //       [600px, 900px)
+      [theme.breakpoints.between('sm', 'md')]: {
+        backgroundColor: 'red',
+        color:'#000'
+      },
+    },
+  });
 
 const BannerProfile = () => {
     const el = useRef(null);
@@ -36,6 +51,7 @@ const BannerProfile = () => {
             typed.current.destroy();
         }
     }, [])
+
     return (
         <div className='bg-primary '>
             <div className='flex justify-end mt-[-280px]'>
@@ -80,26 +96,35 @@ const BannerProfile = () => {
                     </div>
                 </div>
             </div>
-            <div className='md:flex justify-evenly px-5 md:px-10 lg:px-20 pt-72 lg:pt-0'>
+            <div className='md:flex justify-evenly items-start px-5 md:px-10 lg:px-20 pt-72 lg:pt-0'>
                 <div className='md:pb-36'>
                     <div className=''>
                         <div className=''>
                             <p className='text-2xl'>Hello<BsExclamationLg className='inline' size={20} /> I&apos;m</p>
                         </div>
                         <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold pt-4 pb-7'>Mahbub Noyon</h2>
-                        <h2 className=" md:text-lg lg:text-xl mb-16 text-neutral">Full-Stack Developer with  <span className='text-base-100' ref={el} /> </h2>
+                        <h2 className=" md:text-lg lg:text-xl mb-8 md:mb-12 lg:mb-16 text-neutral">Full-Stack Developer with  <span className='text-base-100' ref={el} /> </h2>
                         <Link href='https://drive.google.com/file/d/1rsOy9tdzvIq24gZh5ntMZbAuMe5pHtch/view?usp=sharing' target='_blank' download>
-                            <Button sx={{
-                                borderRadius: '45px',
-                                padding: '20px 40px',
-                                border: '1px solid #65666D',
-                                color: '#65666D',
-                                fontSize: '24px',
-                                fontWeight: '700',
-                                '&:hover': {
-                                    color: '#fff', border: '1px solid #fff', background: 'transparent'
-                                },
-                            }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
+                                <Button
+                                    sx={{
+                                        borderRadius: '45px',
+                                        padding: {
+                                            sm:'10px 20px',
+                                            md:'20px 40px'
+                                        },
+                                        border: '1px solid #65666D',
+                                        color: '#65666D',
+                                        fontSize: {
+                                            xs:'16px',
+                                            sm:'20px',
+                                            lg:'24px',
+                                            xl:'24px'
+                                        },
+                                        fontWeight: '700',
+                                        '&:hover': {
+                                            color: '#fff', border: '1px solid #fff', background: 'transparent'
+                                        },
+                                    }} variant='outlined'>Download CV <AiOutlineDownload size={30} /> </Button>
                         </Link>
                     </div>
                     {/* <div className='hidden lg:block pt-24 absolute'>
@@ -112,10 +137,10 @@ const BannerProfile = () => {
                     </div>
                 </div> */}
                 </div>
-                <div className=' lg:justify-start'>
-                    <div className=''>
-                        <div className='bg-primary'>
-                            <Image className='md:rounded-b-full' src={bannerImage} width='400' height='400' alt='' />
+                <div className='lg:justify-start mt-10 md:pt-0'>
+                    <div className='bg-secondary drop-shadow-2xl'>
+                        <div className='bg-[#F9CCD3] pl-3 pt-16 rounded-tl-full shadow-2xl'>
+                            <Image className='' src={bannerImage} width='400' height='500' alt='' />
                         </div>
                     </div>
                 </div>
