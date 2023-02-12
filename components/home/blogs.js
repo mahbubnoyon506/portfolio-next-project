@@ -27,7 +27,7 @@ const Blogs = () => {
    })
     useEffect( () => {
         blogItems.getData({from: pagination.from, to: pagination.to}).then(res => {
-            console.log(res)
+            // console.log(res)
             setPagination({...pagination, count: res.count})
             setBlogs(res.data)
         })
@@ -73,9 +73,9 @@ const Blogs = () => {
                     )
                 }
             </div>
-            <div className='flex justify-end text-base-100'>
+            <div className='flex justify-end text-[#fff]'>
                 <Pagination 
-                sx={{color:'#fff'}} 
+                style={{color: '#fff'}}
                 count={Math.ceil(pagination.count / pageSize)} 
                 variant="outlined" shape="rounded" 
                 onChange={handleChange}

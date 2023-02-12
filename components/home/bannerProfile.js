@@ -53,7 +53,7 @@ const BannerProfile = () => {
     }, [])
 
     return (
-        <div className='bg-primary '>
+        <div className='bg-primary'>
             <div className='flex justify-end mt-[-280px]'>
                 {/* <div className=' hidden lg:block rotate-[140deg] ml-[-150px] mt-[]'>
                     <div className=''>
