@@ -4,6 +4,7 @@ import MouseParticles from 'react-mouse-particles'
 import Footer from './footer/footer';
 import Header from './header/header';
 import BackToTop from './backToTop/backToTop';
+import { Toaster } from 'react-hot-toast';
 
 const siteTitle = 'Portfolio Site'
 
@@ -29,6 +30,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       <Footer/>
       <BackToTop/>
+      <Toaster />
       <MouseParticles g={1} color="random" cull="col,image-wrapper"/>
     </div>
   );

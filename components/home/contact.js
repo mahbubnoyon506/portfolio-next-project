@@ -1,9 +1,32 @@
 import { Button, Card } from '@mui/material';
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-hot-toast';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { MdMyLocation } from 'react-icons/md';
 
 const Contact = () => {
+
+    const {register, formState:{errors}, handleSubmit} = useForm();
+    const onSubmit = (data) => {
+        fetch('/api/contact', {
+            method : 'POST',
+            body : JSON.stringify(data),
+            headers: {
+                'Content-Type' : 'application/json',
+            }
+        }).then((res) => {
+            if (!res.ok) return "Failed to send message";
+            console.log(res)
+            
+            return(
+                res.json(),
+                toast.success('Successfully send message!')
+            )
+          });
+    }
+
+
     return (
         <div id='contact' className='bg-primary grid gap-5 lg:grid-cols-2 p-5 md:p-10 lg:p-20'>
             <div>
@@ -32,22 +55,26 @@ const Contact = () => {
             </div>
             <div className=''>
                 <Card sx={{ background: '#282A37',  }}>
-                    <form className='text-neutral px-5 md:px-10 lg:px-16 py-5 md:py-8 lg:py-12'>
+                    <form onSubmit={handleSubmit(onSubmit)} className='text-neutral px-5 md:px-10 lg:px-16 py-5 md:py-8 lg:py-12'>
                         <div className='mb-2'>
                             <label className='block' htmlFor="Your name">Your name</label>
-                            <input className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="name" id="name" />
+                            <input {...register('name', {required: 'Name is required.'})} className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="name" id="name" />
+                            {errors.name && <label className='text-sm text-error' htmlFor="">{errors.name?.message}</label>}
                         </div>
                         <div className='mb-2'>
                             <label className='block' htmlFor="Your email">Your email</label>
-                            <input className='focus:outline-none bg-primary pl-2 py-2 w-full' type="email" name="name" id="name" />
+                            <input {...register('email', {required: 'Email is required.'})} className='focus:outline-none bg-primary pl-2 py-2 w-full' type="email" name="email" id="name" />
+                            {errors.email && <label className='text-sm text-error' htmlFor="">{errors.email?.message}</label>}
                         </div>
                         <div className='mb-2'>
                             <label className='block' htmlFor="Your subject">Your subject</label>
-                            <input className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="name" id="name" />
+                            <input {...register('subject', {required: 'Subject is required.'})} className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="subject" id="name" />
+                            {errors.subject && <label className='text-sm text-error' htmlFor="">{errors.subject?.message}</label>}
                         </div>
                         <div className='mb-2'>
                             <label className='block' htmlFor="Your topics">Your topics</label>
-                            <textarea className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="name" id="name" />
+                            <textarea {...register('message', {required:'Message is required.'})} className='focus:outline-none bg-primary pl-2 py-2 w-full' type="text" name="message" id="name" />
+                            {errors.message && <label className='text-sm text-error' htmlFor="">{errors.message?.message}</label>}
                         </div>
                         <Button sx={{
                             borderRadius: '0px', 
