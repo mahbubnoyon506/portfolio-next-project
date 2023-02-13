@@ -25,7 +25,7 @@ const generateEmailContent = (data) => {
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
-        console.log(req.body)
+        // console.log(req.body)
         const data = req.body;
         try {
             await transporter.sendMail({
