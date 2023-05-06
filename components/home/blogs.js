@@ -73,9 +73,10 @@ const Blogs = () => {
                     )
                 }
             </div>
-            <div className='flex justify-end text-[#fff]'>
+            <div className='flex justify-end'>
                 <Pagination 
-                style={{color: '#fff'}}
+                className='blog-pagination'
+                color='success'
                 count={Math.ceil(pagination.count / pageSize)} 
                 variant="outlined" shape="rounded" 
                 onChange={handleChange}
